@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    padding: 0;
+    min-width: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+#central {
+    max-width: 320px;
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 250%;
+    color:#000000;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login {
+    width: 700px;
+    height: auto;
+    position: relative; 
+    right: 150px;
+    padding: 50px 30px;
+    background-color: #787A91;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#login input {
+    font-size: 110%;
+    display:block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 7px;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    font-family: 'Indie Flower', cursive;
+    background-color: #787A91;
+    color: white;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#login input::placeholder {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+}
+
+#login button {
+    display:block;
+    font-family: 'Anton', sans-serif;
+    margin-right: 400px;
+    padding: 15px 30px;
+    border: none;
+    background-color: #F05454;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#login button:hover {
+    background-color: #3D0000;
+    transform: translateY(-2px);
+}
+
+.pie-form {
+    font-size: 90%;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+}
+
+.pie-form a {
+    display: block;
+    margin-right: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #F05454;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    float: inline-end;
+    text-decoration: none;
+}
+
+.pie-form a:hover {
+    background-color: #3D0000;
+    transform: translateY(-2px);
+}
