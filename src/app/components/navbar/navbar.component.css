@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 nav {
     user-select: none;
     height: 80px;
@@ -6,7 +8,8 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(to top, #6B778D, #263859, #17223B);
+    background: linear-gradient(to right, #2B3595, #263859, #17223B, #00818A);
+    font-family: 'Anton', sans-serif;
 }
 
 .options {
@@ -30,7 +33,7 @@ nav {
 
 .options a, 
 .options2 a {
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.65);
+    text-shadow: 4px 4px 10px white;
     padding: 20px;
     user-select: none;
     cursor: pointer;
@@ -40,7 +43,7 @@ nav {
 
 .options a:hover, 
 .options2 a:hover {
-    color: #ffffff;
+    color: black;
     transform: scale(1.2);
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -50,10 +53,38 @@ nav {
 .options a:visited, 
 .options2 a:visited, 
 .options2 a:link {
+    color: black;
+    outline: transparent;
+    text-decoration: none;
+}
+
+.options p, 
+.options2 p {
+    text-shadow: 4px 4px 10px white;
+    padding: 20px;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.options p:hover, 
+.options2 p:hover {
+    color: black;
+    transform: scale(1.2);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.options p:link,
+.options p:visited, 
+.options2 p:visited, 
+.options2 p:link {
     color: whitesmoke;
     outline: transparent;
     text-decoration: none;
 }
+
 
 .hover-underline-animation {
     display: inline-block;
