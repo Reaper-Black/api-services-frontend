@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+body{
+    background: linear-gradient(to right, #041C32, #04293A, #064663);
+}
+
 nav {
     user-select: none;
     height: 80px;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background: linear-gradient(to right, #2B3595, #263859, #17223B, #00818A);
     font-family: 'Anton', sans-serif;
+    border-radius: 50px;
 }
 
 .options {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     list-style: none;
     display: flex;
     justify-content: space-around;
