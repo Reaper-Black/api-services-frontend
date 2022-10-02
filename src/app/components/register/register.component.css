@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: url("https://static.vecteezy.com/system/resources/previews/006/450/024/non_2x/gradient-red-blue-purple-abstract-background-you-can-use-this-background-for-your-content-like-as-video-game-qoute-promotion-template-presentation-education-sports-card-banner-website-etc-free-vector.jpg");
+  background: linear-gradient(to right, #041C32, #04293A, #064663);
 }
 
 .signupFrm {
@@ -17,7 +17,7 @@ body {
 
 
 .form {
-  background: linear-gradient(to top, #4C0033, #790252, #AF0171);
+  background: linear-gradient(to top, #2C3333, #395B64, #A5C9CA);
   width: 700px;
   height: auto;
   border-radius: 10px;
@@ -92,7 +92,7 @@ body {
 }
 
 .submitBtn:hover {
-  background-color: #3D0000;
+  background-color: #719FB0;
   transform: translateY(-2px);
 }
 .input:focus + .label {
@@ -136,6 +136,6 @@ body {
 }
 
 .backLogin:hover {
-    background-color: #3D0000;
+    background-color: #719FB0;
     transform: translateY(-2px);
   }

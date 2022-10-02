@@ -4,15 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { PrivateTasksComponent } from './components/private-tasks/private-tasks.component';
 import { RegisterComponent } from './components/register/register.component';
-import { TasksComponent } from './components/tasks/tasks.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 const routes: Routes = [
-  {path:'*',pathMatch: 'full', redirectTo: 'login'},
+  {path:'', pathMatch:'full',redirectTo:'/dashboard'},
   {path:'login',component: LoginComponent},
   {path:'register',component: RegisterComponent},
-  {path: 'task', component: TasksComponent},
-  {path: 'private-task', component: PrivateTasksComponent}
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'private', component: PrivateTasksComponent}
 ];
 
 @NgModule({
