@@ -5,9 +5,9 @@
                 <div class="titulo">
                     API Servicios
                 </div>
-                <form id="loginform">
-                    <input type="text" name="correo" placeholder="correo" required autofocus>
-                    <input type="password" placeholder="Contraseña" name="password" required autofocus>
+                <form (submit)="signIn()" class="form">
+                    <input type="text" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" name="correo" placeholder="correo" required autofocus>
+                    <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" name="password" required autofocus>
                     <div class="pie-form">
                         <button type="submit" title="Ingresar" name="Ingresar">Login</button>
                         <a href="register" class="goRegister">Registrate</a>
