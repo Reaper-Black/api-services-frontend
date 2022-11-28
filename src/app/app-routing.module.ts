@@ -7,13 +7,15 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 
+import { AuthGuard } from "./auth.guard";
+
 
 const routes: Routes = [
   {path:'', pathMatch:'full',redirectTo:'/dashboard'},
   {path:'login',component: LoginComponent},
   {path:'register',component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'private', component: PrivateTasksComponent},
+  {path: 'private', component: PrivateTasksComponent, canActivate: [AuthGuard]},
   {path:'aboutme', component: AboutMeComponent}
 ];
 

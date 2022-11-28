@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl true --ssl-key {C:/Users/andre/OneDrive/Documentos/Universidad/ING/Cuatrimestre 9/Desarrollo Web Integral/dashboard_sold_apiservices/frontend/localhost.key} --ssl-cert {C:/Users/andre/OneDrive/Documentos/Universidad/ING/Cuatrimestre 9/Desarrollo Web Integral/dashboard_sold_apiservices/frontend/localhost.crt}",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.6.8",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

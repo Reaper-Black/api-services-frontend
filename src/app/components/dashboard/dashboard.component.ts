@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from "../../services/dashboard.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  tasks: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private dashboardService: DashboardService) { }
+
+  ngOnInit() {
+    this.dashboardService.getTasks()
+    .subscribe(
+      res => {
+        console.log(res)
+        this.tasks = res;
+      },
+      err => console.log(err)
+    )
   }
-
 }

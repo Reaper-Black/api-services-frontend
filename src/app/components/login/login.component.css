@@ -81,7 +81,6 @@ body::before{
     
 }
 
-
 #login input {
     font-size: 110%;
     display:block;
@@ -132,11 +131,11 @@ body::before{
     text-align: center;
     margin-top: 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pie-form a {
-    display: block;
-    margin-right: auto;
     padding: 15px 30px;
     border: none;
     background-color: #040303;
@@ -145,7 +144,6 @@ body::before{
     cursor: pointer;
     font-size: 16px;
     margin-top: 30px;
-    float: inline-end;
     text-decoration: none;
 }
 

@@ -6,10 +6,15 @@
         <ul>
           <li><a routerLink="/dashboard">API Servicios</a></li>
           <li><a routerLink="/dashboard"> Home </a></li>
-          <li><a routerLink="/private"> Private </a></li>
-          <li><a routerLink="/login"> Sign In </a></li>
-          <li><a routerLink="/register"> Sign Up </a></li>
+          <li *ngIf="currentUser == 'Admin'"><a routerLink="/private"> Users </a></li>
           <li><a routerLink="/aboutme"> About Me </a></li>
+          <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+            <li><a routerLink="/login" routerLinkActive="active"> Sign In </a></li>
+            <li><a routerLink="/register" routerLinkActive="active"> Sign Up </a></li>
+          </ng-container>
+          <ng-template #loggedIn>
+            <li><a style="cursor:pointer" (click)="authService.logout()"> Sign Off </a></li>
+          </ng-template>
         </ul>
       </div>
     </div>
