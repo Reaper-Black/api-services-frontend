@@ -1,0 +1,50 @@
+body{
+    font: 18px "Nunito", sans-serif;
+    color:black;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../../../assets/bg7.png") no-repeat center;
+    background-size: cover;
+    animation: backgroundZoomAnimate 20s forwards;
+  }
+
+  .titulo {
+    font-size: 250%;
+    font-family: 'Anton', sans-serif;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    text-shadow: 0 3px 5px white ;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: -100px;
+  }
+
+  .info{
+    margin-top: 200px;
+    margin-bottom: -150px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Anton', sans-serif;
+  }
+
+  .acerca-de{
+    margin-left: 200px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+  }
+
+  .maps{
+    margin-top: -200px;
+    margin-left: 70rem;
+  }

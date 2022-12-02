@@ -1,8 +1,22 @@
+<div class="titulo">
+    <h1> Bienvenidos a API Servicios</h1>
+</div>
+<div class="info">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo soluta numquam dolorem modi distinctio neque sed delectus magnam possimus quis nisi voluptatibus, tempora magni. Earum at nam voluptatem sapiente nihil.</p>
 
+</div>
 <body>
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let task of tasks">
-            {{task._id}}- {{task.name}}: {{task.description}}
-        </li>
-    </ul>
+    <div class="container-fluid px-0">
+        <div class="row bg-dark h-100">
+            <div class="col-12 px-0">
+                <app-carousel [items]="carouselData"></app-carousel>
+            </div>
+        </div>
+    </div>
 </body>
+<div class="acerca-de">
+    <p>Ubicanos estamos muy cerca de ti!!!</p>
+</div>
+<div class="maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462.76678187726077!2d-102.29235451774464!3d21.890905326659382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee671d4d6469%3A0x344aa779f31228bb!2sGran%20Avenida%2018%2C%20Primavera%2C%2020050%20Aguascalientes%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1669977961229!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

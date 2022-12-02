@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DashboardService } from "../../services/dashboard.service";
+import { ICarouselItem } from '../carousel/Icarousel-item.metadata';
+import { CAROUSEL_DATA_ITEMS } from "../../data/constants/carousel.const";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,18 +10,21 @@ import { DashboardService } from "../../services/dashboard.service";
 })
 export class DashboardComponent implements OnInit {
 
-  tasks: any[] = [];
+  public carouselData: ICarouselItem[] = CAROUSEL_DATA_ITEMS;
 
-  constructor(private dashboardService: DashboardService) { }
+  //tasks: any[] = [];
+  constructor(/*private dashboardService: DashboardService*/) {
+  }
 
   ngOnInit() {
-    this.dashboardService.getTasks()
+    /*this.dashboardService.getTasks()
     .subscribe(
       res => {
         console.log(res)
         this.tasks = res;
       },
       err => console.log(err)
-    )
+    )*/
   }
+
 }

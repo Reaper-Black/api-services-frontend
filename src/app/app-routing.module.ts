@@ -6,6 +6,8 @@ import { PrivateTasksComponent } from './components/private-tasks/private-tasks.
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { NewProductsComponent } from './components/new-products/new-products.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
 
 import { AuthGuard } from "./auth.guard";
 
@@ -16,6 +18,9 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'private', component: PrivateTasksComponent, canActivate: [AuthGuard]},
+  {path: 'products', component: NewProductsComponent, canActivate: [AuthGuard]},
+  {path: 'edit-product/:id', component: NewProductsComponent},
+  {path: 'list-products', component:ListProductsComponent, canActivate: [AuthGuard]},
   {path:'aboutme', component: AboutMeComponent}
 ];
 
