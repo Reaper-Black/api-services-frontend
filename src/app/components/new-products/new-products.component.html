@@ -39,6 +39,29 @@
                                 </div>
                             </div>
                             <div class="inputContainer">
+                                <input type="text" formControlName="peso" class="form-control-lg" placeholder="Peso">
+                                <div class="text-danger"
+                                    *ngIf="productoForm.get('peso')?.hasError('required') && productoForm.get('peso')?.touched">
+                                    <span>El peso <strong>es obligatorio</strong></span>
+                                </div>
+                            </div>
+                            <div class="inputContainer">
+                                <input type="text" formControlName="dimensiones" class="form-control-lg"
+                                    placeholder="Dimensiones">
+                                <div class="text-danger"
+                                    *ngIf="productoForm.get('dimensiones')?.hasError('required') && productoForm.get('dimensiones')?.touched">
+                                    <span>Las dimensiones <strong>son obligatorias</strong></span>
+                                </div>
+                            </div>
+                            <div class="inputContainer">
+                                <input type="text" formControlName="material" class="form-control-lg"
+                                    placeholder="Material">
+                                <div class="text-danger"
+                                    *ngIf="productoForm.get('material')?.hasError('required') && productoForm.get('material')?.touched">
+                                    <span>El material <strong>es obligatorio</strong></span>
+                                </div>
+                            </div>
+                            <div class="inputContainer">
                                 <button routerLink="/" class="btn-back">VOLVER</button>
                                 <button type="submit" [disabled]="productoForm.invalid"
                                     class="btn-success">ACEPTAR</button>

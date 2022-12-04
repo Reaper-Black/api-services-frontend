@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Producto } from 'src/app/models/producto';
@@ -25,6 +25,9 @@ export class NewProductsComponent implements OnInit {
       categoria: ['', Validators.required],
       ubicacion: ['', Validators.required],
       precio: ['', Validators.required],
+      peso: ['', Validators.required],
+      dimensiones: ['', Validators.required],
+      material: ['', Validators.required]
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -40,6 +43,9 @@ export class NewProductsComponent implements OnInit {
       categoria: this.productoForm.get('categoria')?.value,
       ubicacion: this.productoForm.get('ubicacion')?.value,
       precio: this.productoForm.get('precio')?.value,
+      peso: this.productoForm.get('peso')?.value,
+      dimensiones: this.productoForm.get('dimensiones')?.value,
+      material: this.productoForm.get('material')?.value
     }
 
     if (this.id !== null) {
@@ -72,7 +78,6 @@ export class NewProductsComponent implements OnInit {
   }
 
   esEditar() {
-
     if (this.id !== null) {
       this.titulo = 'Editar producto';
       this._productoService.obtenerProducto(this.id).subscribe(data => {
@@ -81,10 +86,11 @@ export class NewProductsComponent implements OnInit {
           categoria: data.categoria,
           ubicacion: data.ubicacion,
           precio: data.precio,
+          peso: data.peso,
+          dimensiones: data.dimensiones,
+          material: data.material
         })
       })
     }
   }
-
-
 }

@@ -26,7 +26,7 @@ body::before {
 .card {
     table-layout: fixed;
     width: 600px;
-    height: 400px;
+    height: 600px;
     border-collapse: collapse;
     border: 5px solid black;
     background: white;
