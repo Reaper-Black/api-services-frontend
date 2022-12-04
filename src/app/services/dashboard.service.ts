@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class DashboardService {
 
-  private URL = 'https://api-full-conected.onrender.com/apiservices'
+  private URL = 'http://localhost:3000/apiservices'
 
   constructor(
     private http: HttpClient) { }
