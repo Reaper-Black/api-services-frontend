@@ -19,6 +19,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NewProductsComponent } from './components/new-products/new-products.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { NewUsersComponent } from './components/new-users/new-users.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     AboutMeComponent,
     NewProductsComponent,
     ListProductsComponent,
-    CarouselComponent
+    CarouselComponent,
+    ListUsersComponent,
+    NewUsersComponent
   ],
   imports: [
     BrowserModule,
