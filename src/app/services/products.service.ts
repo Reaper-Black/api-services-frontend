@@ -8,7 +8,7 @@ import { Producto } from '../models/producto';
 })
 export class ProductsService {
 
-  URL = 'https://api-services-backend.onrender.com/apiservices/products/'
+  URL = 'https://api-full-conected.onrender.com/apiservices/products/'
 
   constructor(private http: HttpClient) { }
 
