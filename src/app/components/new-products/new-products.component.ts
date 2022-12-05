@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { Producto } from 'src/app/models/producto';
-import { ProductsService } from 'src/app/services/products.service';
+import { Producto } from '../../models/producto';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-new-products',

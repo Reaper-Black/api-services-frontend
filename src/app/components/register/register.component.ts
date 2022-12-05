@@ -15,7 +15,10 @@ export class RegisterComponent implements OnInit {
     firstname: '',
     lastname: '',
     password: '',
-    rol: 'Usuario'
+    rol: 'Usuario',
+    date: '',
+    age: '',
+    address: ''
   }
 
   securyPassword = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
@@ -46,7 +49,7 @@ export class RegisterComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token)
-          this.router.navigate(['/aboutme'])
+          this.router.navigate(['/dashboard'])
           Swal.fire(
             'Cuenta Creada Correctamente',
             'Presiona OK',

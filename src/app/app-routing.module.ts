@@ -8,8 +8,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NewProductsComponent } from './components/new-products/new-products.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
+import { NewUsersComponent } from './components/new-users/new-users.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
 
 import { AuthGuard } from "./auth.guard";
+
+
 
 
 const routes: Routes = [
@@ -21,7 +25,10 @@ const routes: Routes = [
   {path: 'products', component: NewProductsComponent, canActivate: [AuthGuard]},
   {path: 'edit-product/:id', component: NewProductsComponent},
   {path: 'list-products', component:ListProductsComponent, canActivate: [AuthGuard]},
-  {path:'aboutme', component: AboutMeComponent}
+  {path:'aboutme', component: AboutMeComponent},
+  {path: 'create-user', component: NewUsersComponent, canActivate: [AuthGuard]},
+  {path: 'list-user', component: ListUsersComponent, canActivate: [AuthGuard]},
+  {path: 'edit-user/:id', component: NewUsersComponent}
 ];
 
 @NgModule({

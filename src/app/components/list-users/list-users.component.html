@@ -1,1 +1,70 @@
-<p>list-users works!</p>
+<body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card-medium">
+            <div class="card-body text-center">
+              <span class="title-medium">LISTADO DE USUARIOS</span>
+              <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Nombre(s)</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Contraseña</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let usuario of listUsuarios">
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.firstname }}</td>
+                    <td>{{ usuario.lastname }}</td>
+                    <td>{{ usuario.password }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsuarios.length == 0">No hay usuarios para mostrar</h5>
+            </div>
+          </div>
+  
+          <div class="card-full">
+            <div class="card-body text-center">
+              <span class="title-full">LISTADO DE USUARIOS A DETALLE</span>
+              <button class="btn-new-products" routerLink="/create-user">NUEVO USUARIO</button>
+              <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Nombre(s)</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Dirección</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let usuario of listUsuarios">
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.firstname }}</td>
+                    <td>{{ usuario.lastname }}</td>
+                    <td>{{ usuario.password }}</td>
+                    <td>{{ usuario.rol }}</td>
+                    <td>{{ usuario.date }}</td>
+                    <td>{{ usuario.age }}</td>
+                    <td>{{ usuario.address }}</td>
+                    <td>
+                        <i [routerLink]="['/edit-user', usuario._id]" class="fas fa-edit text-primary"></i>
+                        <i (click)="eliminarUsuario(usuario._id)" class="fas fa-trash text-danger"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsuarios.length == 0">No hay productos para mostrar</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

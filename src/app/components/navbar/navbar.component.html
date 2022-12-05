@@ -9,6 +9,8 @@
            <!--<li *ngIf="currentUser == 'Admin'"><a routerLink="/private"> Users </a></li>-->
            <li *ngIf="currentUser == 'Admin'"><a routerLink="/products"> Productos </a></li>
            <li *ngIf="currentUser == 'Admin'"><a routerLink="/list-products"> Lista de Productos </a></li>
+           <li *ngIf="currentUser == 'Admin'"><a routerLink="/create-user"> Usuarios </a></li>
+           <li *ngIf="currentUser == 'Admin'"><a routerLink="/list-user"> Lista de Usuarios </a></li>
           <li><a routerLink="/aboutme"> About Me </a></li>
           <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
             <li><a routerLink="/login" routerLinkActive="active"> Sign In </a></li>
