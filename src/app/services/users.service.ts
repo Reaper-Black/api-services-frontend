@@ -8,7 +8,8 @@ import { Usuario } from '../models/user';
 })
 export class UsersService {
 
-  url = 'http://localhost:3000/apiservices/usuarios/'
+  url = 'https://api-services-backend-production.up.railway.app/apiservices/usuarios/'
+  /*'http://localhost:3000/apiservices/usuarios/'*/
 
   constructor(private http: HttpClient) { }
 

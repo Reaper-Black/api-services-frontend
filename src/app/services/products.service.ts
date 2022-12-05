@@ -8,7 +8,9 @@ import { Producto } from '../models/producto';
 })
 export class ProductsService {
 
-  URL = 'http://localhost:3000/apiservices/products/'
+  URL = 'https://api-services-backend-production.up.railway.app/apiservices/products/'
+  
+  /*'http://localhost:3000/apiservices/products/'*/
 
   constructor(private http: HttpClient) { }
 

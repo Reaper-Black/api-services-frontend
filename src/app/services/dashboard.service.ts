@@ -6,7 +6,8 @@ import { HttpClient } from "@angular/common/http";
 })
 export class DashboardService {
 
-  private URL = 'http://localhost:3000/apiservices'
+  private URL = "https://api-services-backend-production.up.railway.app/apiservices"
+  /*'http://localhost:3000/apiservices'*/
 
   constructor(
     private http: HttpClient) { }
